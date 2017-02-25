@@ -1,0 +1,33 @@
+* {
+		box-sizing: border-box;
+}
+
+body {
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#container {
+	margin: 130px auto;
+	border: 1px solid black;
+	width: 50%;
+	height: 400px;
+	background-color: rgba(142,142,142,.8);
+}
+
+.navbar {
+	display: block;
+}
+
+.weatherData {
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	font-size: 24px;
+}
