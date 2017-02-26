@@ -1,13 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
 * {
-		box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Varela Round', sans-serif;
 }
 
 body {
-	background-image: url(background.jpg);
+/*	background-image: url(background.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-attachment: fixed;
+	background-attachment: fixed;*/
 	background-size: cover;
+	background: #3C3B3D;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	font-size: 24px;
+}
+
+button {
+	width: 32.5%;
+}
+
+h2 {
+	text-align: center;
 }
 
 #container {
@@ -15,7 +33,24 @@ body {
 	border: 1px solid black;
 	width: 50%;
 	height: 400px;
-	background-color: rgba(142,142,142,.8);
+/*	background-color: rgba(142,142,142,.8);*/
+	background: white;
+}
+
+.days-data {
+	display: inline-block;
+	text-align: center;
+	width: 20%;
+}
+
+.hours-data {
+	display: inline-block;
+	text-align: center;
+	width: 16%;
+}
+
+.current-data {
+	text-align: center;
 }
 
 .navbar {
@@ -24,10 +59,4 @@ body {
 
 .weatherData {
 	display: block;
-}
-
-a {
-	text-decoration: none;
-	color: black;
-	font-size: 24px;
 }
