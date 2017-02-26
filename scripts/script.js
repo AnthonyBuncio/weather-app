@@ -14,34 +14,44 @@ var handleError = function(err) {
 }
 
 var handleCurrent = function(apiResponse) {
-	var currentWeather = apiResponse.currently.temperature
+	console.log(apiResponse)
+	var currentWeather = apiResponse.currently.temperature,
+		currentSummary = apiResponse.currently.summary,
+		innerCurrent = ''
 	currentWeather = Math.floor(currentWeather)
-	containerNode.innerHTML = '<p>' + currentWeather + '</p>'
+	innerCurrent += '<div class="current-data"><p>' + currentWeather + '</p>'
+	innerCurrent += '<p>' + currentSummary + '</p></div>'
+	containerNode.innerHTML = innerCurrent
 }
 
 var handleHours = function(dataObj) {
 	var getString = '',
 		date = new Date(dataObj.time*1000),
 		hours = date.getHours(),
-		temp = Math.floor(dataObj.temperature)
+		temp = Math.floor(dataObj.temperature),
+		display = 'AM'
+
 
 	if (hours > 12) {
 	   hours -= 12;
+	   display = 'PM'
 	} else if (hours === 0) {
 	   hours = 12;
 	}
 
-	getString += '<p>' + hours + '</p>'
-	getString += '<p>' + temp + '</p>'
+	getString += '<div class="hours-data"><p>' + hours + ' ' + display + '</p>'
+	getString += '<p>' + temp + '</p></div>'
 	return getString
 }
 
 var handleHourly = function(apiResponse) {
-	var hourlyWeather = apiResponse.hourly.data
-	var hourlyHTML = ''
+	var hourlyWeather = apiResponse.hourly.data,
+		hourlySummary = apiResponse.hourly.summary
+	var hourlyHTML = '<h2>' + hourlySummary + '</h2>' + '<ul>'
 	for (var i = 0; i < 6; i++) { //only gets first 6 values of array [0-5]
 		hourlyHTML += handleHours(hourlyWeather[i])
-	} containerNode.innerHTML = hourlyHTML
+	} 
+	containerNode.innerHTML = hourlyHTML
 }
 
 var handleDays = function(dataObj) {
@@ -52,15 +62,17 @@ var handleDays = function(dataObj) {
 		d = dayList[day],
 		tempMax = Math.floor(dataObj.temperatureMax),
 		tempMin = Math.floor(dataObj.temperatureMin)
-	getString += '<p>' + d + '<p>'
+	getString += '<div class="days-data"><p>' + d + '<p>'
 	getString += '<p>' + 'High: ' + tempMax + '<p>'
-	getString += '<p>' + 'Low: ' + tempMin + '<p>'
+	getString += '<p>' + 'Low: ' + tempMin + '<p></div>'
 	return getString
 }
 
 var handleDaily = function(apiResponse) {
-	var dailyWeather = apiResponse.daily.data
-	var dailyHTML = ''
+	var dailyWeather = apiResponse.daily.data,
+		dailySummary = apiResponse.daily.summary
+	console.log(dailyWeather)
+	var dailyHTML = '<h2>' + dailySummary + '</h2>'
 	for (var i = 0; i < 5; i++) {
 		dailyHTML += handleDays(dailyWeather[i])
 	} containerNode.innerHTML = dailyHTML
