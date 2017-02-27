@@ -47,7 +47,7 @@ var handleHours = function(dataObj) {
 var handleHourly = function(apiResponse) {
 	var hourlyWeather = apiResponse.hourly.data,
 		hourlySummary = apiResponse.hourly.summary
-	var hourlyHTML = '<h2>' + hourlySummary + '</h2>' + '<ul>'
+	var hourlyHTML = '<br><h2>' + hourlySummary + '</h2>' + '<ul>'
 	for (var i = 0; i < 6; i++) { //only gets first 6 values of array [0-5]
 		hourlyHTML += handleHours(hourlyWeather[i])
 	} 
@@ -72,7 +72,7 @@ var handleDaily = function(apiResponse) {
 	var dailyWeather = apiResponse.daily.data,
 		dailySummary = apiResponse.daily.summary
 	console.log(dailyWeather)
-	var dailyHTML = '<h2>' + dailySummary + '</h2>'
+	var dailyHTML = '<br><h2>' + dailySummary + '</h2>'
 	for (var i = 0; i < 5; i++) {
 		dailyHTML += handleDays(dailyWeather[i])
 	} containerNode.innerHTML = dailyHTML

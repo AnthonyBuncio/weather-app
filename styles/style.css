@@ -6,22 +6,23 @@
 }
 
 body {
-/*	background-image: url(background.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;*/
 	background-size: cover;
-	background: #3C3B3D;
+    background: linear-gradient(to left, #ef32d9 , #89fffd);
+	font-size: 14px;
 }
 
 a {
 	text-decoration: none;
 	color: black;
-	font-size: 24px;
+	font-size: 1rem;
 }
 
 button {
-	width: 32.5%;
+	width: 32.9%;
+	background: #00ccff;
+	color: white;
+	border: 2px solid #07f;
+	border-radius: 5px;
 }
 
 h2 {
@@ -30,27 +31,30 @@ h2 {
 
 #container {
 	margin: 130px auto;
-	border: 1px solid black;
 	width: 50%;
-	height: 400px;
-/*	background-color: rgba(142,142,142,.8);*/
-	background: white;
+	height: 300px;
+/*	border: 1px solid black;*/
+/*	background-color: rgba(142,142,142,.1);*/
+/*	background: white;*/
 }
 
 .days-data {
 	display: inline-block;
 	text-align: center;
 	width: 20%;
+	font-size: 1rem;
 }
 
 .hours-data {
 	display: inline-block;
 	text-align: center;
 	width: 16%;
+	font-size: 1rem;
 }
 
 .current-data {
 	text-align: center;
+	font-size: 3rem;
 }
 
 .navbar {
