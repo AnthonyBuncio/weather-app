@@ -7,7 +7,7 @@
 [![license](https://img.shields.io/npm/l/express.svg)](https://img.shields.io/npm/l/express.svg)
 
 [![forthebadge](http://forthebadge.com/images/badges/check-it-out.svg)](http://forthebadge.com)
-[![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/powered-by-water.svg)](http://forthebadge.com)
 
 <h2>Description</h2>
 Uses geolocation to find the users current location and gets weather data for that location using the Dark Sky API. Has options for current weather, hourly weather, or 5 day forecast.
