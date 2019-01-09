@@ -30,8 +30,8 @@ Uses geolocation to find the users current location and gets weather data for th
 <h2>Install && Development</h2>
 
 ```
-$ git clone https://github.com/AnthonyBuncio/weatherApp.git
-$ cd weatherApp
+$ git clone https://github.com/AnthonyBuncio/weather-app.git
+$ cd weather-app
 $ node server.js
 ```
 
