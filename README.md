@@ -1,4 +1,4 @@
-<h1>WeatherApp</h1>
+<h1>#weather-app</h1>
 
 [![npm status](https://img.shields.io/npm/v/npm.svg)](https://img.shields.io/npm/v/npm.svg)
 [![github release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://img.shields.io/github/release/qubyte/rubidium.svg)
